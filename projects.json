@@ -12,24 +12,21 @@
       "description": "Zautomatyzowany marketing online z Google Maps.",
       "url": "",
       "github": "https://github.com/starlinkee/mega-fun",
-      "tags": ["Marketing"],
-      "featured": true
+      "tags": ["Marketing"]
     },
     {
       "title": "Chicken of the City",
       "description": "Przykład aplikacji webowej do składania zamówien dla restauracji.",
       "url": "",
       "github": "https://github.com/starlinkee/chicken-of-the-city",
-      "tags": ["Sklep Online", "Restauracja"],
-      "featured": false
+      "tags": ["Sklep Online", "Restauracja"]
     },
     {
       "title": "Stadnina Rancho",
       "description": "Przykład aplikacji webowej dla stadniny koni.",
       "url": "",
       "github": "https://github.com/starlinkee/stadnina-rancho",
-      "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"],
-      "featured": false
+      "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
     }
   ]
 }

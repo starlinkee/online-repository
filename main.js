@@ -16,7 +16,7 @@ async function init() {
     if (data.owner.email)
       nav.innerHTML += `<a href="mailto:${data.owner.email}">Email</a>`;
 
-    const projects = [...data.projects].sort((a, b) => b.featured - a.featured);
+    const projects = data.projects;
 
     const allTags = [...new Set(projects.flatMap(p => p.tags))].sort();
 
@@ -34,7 +34,7 @@ async function init() {
       const active = [...document.querySelectorAll('.filter-cb:checked')].map(cb => cb.value);
       const visible = projects.filter(p => p.tags.some(t => active.includes(t)));
       grid.innerHTML = visible.map(p => `
-        <div class="card${p.featured ? ' card--featured' : ''}">
+        <div class="card">
           <h2>${p.title}</h2>
           <p>${p.description}</p>
           <div class="tags">
