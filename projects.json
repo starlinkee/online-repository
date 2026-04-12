@@ -1,0 +1,27 @@
+{
+  "owner": {
+    "name": "Twoje Imię",
+    "tagline": "Krótki opis tego co robisz",
+    "github": "https://github.com/twojeKonto",
+    "linkedin": "https://linkedin.com/in/twojeKonto",
+    "email": "ty@example.com"
+  },
+  "projects": [
+    {
+      "id": "przyklad-projektu",
+      "title": "Przykładowy Projekt",
+      "description": "Krótki opis co projekt robi i dlaczego powstał.",
+      "url": "https://github.com/twojeKonto/projekt",
+      "tags": ["Python", "CLI"],
+      "featured": true
+    },
+    {
+      "id": "drugi-projekt",
+      "title": "Drugi Projekt",
+      "description": "Opis drugiego projektu.",
+      "url": "https://github.com/twojeKonto/drugi-projekt",
+      "tags": ["JavaScript", "Web"],
+      "featured": false
+    }
+  ]
+}
