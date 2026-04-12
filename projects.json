@@ -30,9 +30,15 @@
     },
     {
       "title": "BMT App",
-      "description": "Przykład aplikacji webowej dla stadniny koni.",
+      "description": "Aplikacja webowa dla firmy BMT do zarządzania nieruchomościami - wystawianie rachunków za czynsze i media.",
       "url": "bmt.viktorbobinski.com",
-      "github": "https://github.com/starlinkee/stadnina-rancho",
+      "github": "https://github.com/starlinkee/bmt-app",
+      "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
+    },
+    {
+      "title": "Starlinkee.com",
+      "description": "Aplikacja łącząca się z płykami do wystawiania opinii na Google - Starlinkee.",
+      "url": "www.starlinkee.com",
       "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
     }
   ]
