@@ -34,7 +34,7 @@ async function init() {
 
       grid.innerHTML = visible.map(p => `
         <div class="card${p.url ? ' card--clickable' : ''}"
-             ${p.url ? `onclick="window.open('${p.url}','_blank','noopener,noreferrer')"` : ''}>
+             ${p.url ? `onclick="window.open('${p.url.startsWith('http') ? p.url : 'https://' + p.url}','_blank','noopener,noreferrer')"` : ''}>
           <h2>${p.title}</h2>
           <p>${p.description}</p>
           <div class="tags">
