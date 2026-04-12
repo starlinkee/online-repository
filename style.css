@@ -70,6 +70,41 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Filters */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--surface);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.filter-label:hover {
+  border-color: var(--accent);
+}
+
+.filter-label input {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 /* Grid */
 #project-grid {
   display: grid;

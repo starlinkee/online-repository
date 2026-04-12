@@ -18,19 +18,37 @@ async function init() {
 
     const projects = [...data.projects].sort((a, b) => b.featured - a.featured);
 
-    const grid = document.getElementById('project-grid');
-    grid.innerHTML = projects.map(p => `
-      <a class="card${p.featured ? ' card--featured' : ''}"
-         href="${p.url}"
-         target="_blank"
-         rel="noopener noreferrer">
-        <h2>${p.title}</h2>
-        <p>${p.description}</p>
-        <div class="tags">
-          ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-        </div>
-      </a>
+    const allTags = [...new Set(projects.flatMap(p => p.tags))].sort();
+
+    const filters = document.getElementById('filters');
+    filters.innerHTML = allTags.map(tag => `
+      <label class="filter-label">
+        <input type="checkbox" class="filter-cb" value="${tag}" checked>
+        ${tag}
+      </label>
     `).join('');
+
+    const grid = document.getElementById('project-grid');
+
+    function renderGrid() {
+      const active = [...document.querySelectorAll('.filter-cb:checked')].map(cb => cb.value);
+      const visible = projects.filter(p => p.tags.some(t => active.includes(t)));
+      grid.innerHTML = visible.map(p => `
+        <a class="card${p.featured ? ' card--featured' : ''}"
+           href="${p.url}"
+           target="_blank"
+           rel="noopener noreferrer">
+          <h2>${p.title}</h2>
+          <p>${p.description}</p>
+          <div class="tags">
+            ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+        </a>
+      `).join('') || '<p class="empty">Brak projektów dla wybranych kategorii.</p>';
+    }
+
+    filters.addEventListener('change', renderGrid);
+    renderGrid();
   } catch (err) {
     document.getElementById('project-grid').innerHTML =
       `<p class="error">Błąd: ${err.message}</p>`;
