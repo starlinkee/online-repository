@@ -1,0 +1,1 @@
+Po każdej zmianie zrób commit i push na github z krótką notatką w j. polskim
