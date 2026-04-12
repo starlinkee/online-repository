@@ -12,7 +12,7 @@
       "description": "Zautomatyzowany marketing online z Google Maps.",
       "url": "riskydev.com",
       "github": "https://github.com/starlinkee/mega-fun",
-      "tags": ["Marketing"]
+      "tags": ["Marketing", "Starlinkee"]
     },
     {
       "title": "Chicken of the City",
@@ -31,15 +31,15 @@
     {
       "title": "BMT App",
       "description": "Aplikacja webowa dla firmy BMT do zarządzania nieruchomościami.",
-      "url": "bmt.viktorbobinski.com",
+      "url": "bmt.riskydev.com",
       "github": "https://github.com/starlinkee/bmt-app",
-      "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
+      "tags": ["Nieruchomości", "BMT"]
     },
     {
       "title": "Starlinkee.com",
       "description": "Aplikacja łącząca się z płykami do wystawiania opinii na Google - Starlinkee.",
       "url": "www.starlinkee.com",
-      "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
+      "tags": ["Sklep Online", "Starlinkee"]
     }
   ]
 }
