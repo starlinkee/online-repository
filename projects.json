@@ -1,26 +1,26 @@
 {
   "owner": {
-    "name": "Twoje Imię",
-    "tagline": "Krótki opis tego co robisz",
-    "github": "https://github.com/twojeKonto",
-    "linkedin": "https://linkedin.com/in/twojeKonto",
-    "email": "ty@example.com"
+    "name": "Viktor Bobiński",
+    "tagline": "Dedykowane rozwiązania dla firm",
+    "github": "https://github.com/starlinkee",
+    "linkedin": "https://linkedin.com/in/viktor-bobinski",
+    "email": "vikbobinski@gmail.com"
   },
   "projects": [
     {
-      "id": "przyklad-projektu",
-      "title": "Przykładowy Projekt",
-      "description": "Krótki opis co projekt robi i dlaczego powstał.",
-      "url": "https://github.com/twojeKonto/projekt",
-      "tags": ["Python", "CLI"],
+      "id": "mega-fun",
+      "title": "Mega-Fun",
+      "description": "Zautomatyzowany marketing online z Google Maps.",
+      "url": "https://github.com/starlinkee/mega-fun",
+      "tags": ["Marketing"],
       "featured": true
     },
     {
-      "id": "drugi-projekt",
-      "title": "Drugi Projekt",
-      "description": "Opis drugiego projektu.",
-      "url": "https://github.com/twojeKonto/drugi-projekt",
-      "tags": ["JavaScript", "Web"],
+      "id": "chicken-of-the-city",
+      "title": "Chicken of the City",
+      "description": "Przykład aplikacji webowej do składania zamówien dla restauracji.",
+      "url": "https://github.com/starlinkee/chicken-of-the-city",
+      "tags": ["Sklep Online", "Restauracja"],
       "featured": false
     }
   ]
