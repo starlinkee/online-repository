@@ -119,7 +119,6 @@ nav a:hover {
   border: 1px solid transparent;
   border-radius: var(--radius);
   padding: 1.5rem;
-  text-decoration: none;
   color: inherit;
   transition: border-color 0.15s, transform 0.15s;
 }
@@ -127,6 +126,22 @@ nav a:hover {
 .card:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.card-links a:hover {
+  text-decoration: underline;
 }
 
 .card--featured {
