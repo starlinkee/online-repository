@@ -17,22 +17,21 @@ async function init() {
       nav.innerHTML += `<a href="mailto:${data.owner.email}">Email</a>`;
 
     const projects = data.projects;
-
     const allTags = [...new Set(projects.flatMap(p => p.tags))].sort();
+    const selected = new Set();
 
     const filters = document.getElementById('filters');
-    filters.innerHTML = allTags.map(tag => `
-      <label class="filter-label">
-        <input type="checkbox" class="filter-cb" value="${tag}" checked>
-        ${tag}
-      </label>
-    `).join('');
+    filters.innerHTML = allTags.map(tag =>
+      `<button class="filter-tag" data-tag="${tag}">${tag}</button>`
+    ).join('');
 
     const grid = document.getElementById('project-grid');
 
     function renderGrid() {
-      const active = [...document.querySelectorAll('.filter-cb:checked')].map(cb => cb.value);
-      const visible = projects.filter(p => p.tags.some(t => active.includes(t)));
+      const visible = selected.size === 0
+        ? projects
+        : projects.filter(p => [...selected].every(t => p.tags.includes(t)));
+
       grid.innerHTML = visible.map(p => `
         <div class="card">
           <h2>${p.title}</h2>
@@ -48,7 +47,20 @@ async function init() {
       `).join('') || '<p class="empty">Brak projektów dla wybranych kategorii.</p>';
     }
 
-    filters.addEventListener('change', renderGrid);
+    filters.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-tag');
+      if (!btn) return;
+      const tag = btn.dataset.tag;
+      if (selected.has(tag)) {
+        selected.delete(tag);
+        btn.classList.remove('filter-tag--active');
+      } else {
+        selected.add(tag);
+        btn.classList.add('filter-tag--active');
+      }
+      renderGrid();
+    });
+
     renderGrid();
   } catch (err) {
     document.getElementById('project-grid').innerHTML =

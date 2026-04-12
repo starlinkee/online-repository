@@ -66,26 +66,25 @@ nav a:hover {
   margin-bottom: 1.5rem;
 }
 
-.filter-label {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
+.filter-tag {
   background: var(--surface);
-  border: 1px solid transparent;
+  border: 1px solid #cccccc;
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: border-color 0.15s;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  color: var(--text);
 }
 
-.filter-label:hover {
+.filter-tag:hover {
   border-color: var(--accent);
 }
 
-.filter-label input {
-  accent-color: var(--accent);
-  cursor: pointer;
+.filter-tag--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
 }
 
 .empty {
