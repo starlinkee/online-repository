@@ -27,6 +27,13 @@
       "url": "",
       "github": "https://github.com/starlinkee/stadnina-rancho",
       "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
+    },
+    {
+      "title": "BMT App",
+      "description": "Przykład aplikacji webowej dla stadniny koni.",
+      "url": "",
+      "github": "https://github.com/starlinkee/stadnina-rancho",
+      "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
     }
   ]
 }

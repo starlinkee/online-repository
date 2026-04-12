@@ -33,15 +33,15 @@ async function init() {
         : projects.filter(p => [...selected].every(t => p.tags.includes(t)));
 
       grid.innerHTML = visible.map(p => `
-        <div class="card">
+        <div class="card${p.url ? ' card--clickable' : ''}"
+             ${p.url ? `onclick="window.open('${p.url}','_blank','noopener,noreferrer')"` : ''}>
           <h2>${p.title}</h2>
           <p>${p.description}</p>
           <div class="tags">
             ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
           </div>
           <div class="card-links">
-            ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer">Aplikacja</a>` : ''}
-            ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer">GitHub</a>` : ''}
+            ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub</a>` : ''}
           </div>
         </div>
       `).join('') || '<p class="empty">Brak projektów dla wybranych kategorii.</p>';
