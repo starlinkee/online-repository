@@ -30,7 +30,7 @@
     },
     {
       "title": "BMT App",
-      "description": "Aplikacja webowa dla firmy BMT do zarządzania nieruchomościami - wystawianie rachunków za czynsze i media.",
+      "description": "Aplikacja webowa dla firmy BMT do zarządzania nieruchomościami.",
       "url": "bmt.viktorbobinski.com",
       "github": "https://github.com/starlinkee/bmt-app",
       "tags": ["Sklep Online", "Kalendarz", "Stadnina Koni"]
