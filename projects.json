@@ -39,7 +39,13 @@
       "title": "Starlinkee.com",
       "description": "Aplikacja łącząca się z płykami do wystawiania opinii na Google - Starlinkee.",
       "url": "www.starlinkee.com",
-      "tags": ["Sklep Online", "Starlinkeee"]
+      "tags": ["Sklep Online", "Starlinkee"]
+    },
+    {
+      "title": "Webapp Template",
+      "description": "Szablon aplikacji webowej do szybkiego tworzenia stron internetowych.",
+      "url": "webapp-template-delta.vercel.app",
+      "tags": ["Template"]
     }
   ]
 }
